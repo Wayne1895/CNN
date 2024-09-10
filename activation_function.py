@@ -3,7 +3,7 @@ from activation import Activation
 import numpy as np
 
 class Tanh(Activation):
-    def __inti__(self):
+    def __init__(self):
         def tanh(x):
             return np.tanh(x)
         
