@@ -1,4 +1,4 @@
-from dense import Dense
+from dense_layer import Dense
 from activation_function import Tanh
 from loss import mse, mse_prime
 import numpy as np

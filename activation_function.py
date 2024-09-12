@@ -1,5 +1,5 @@
 from layer import Layer
-from activation import Activation
+from activation_layer import Activation
 import numpy as np
 
 class Tanh(Activation):
