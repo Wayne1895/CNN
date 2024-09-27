@@ -1,7 +1,7 @@
 import numpy as np
 
 class Layer:
-    def __infi__(self):
+    def __init__(self):
         self.input = None
         self.output = None
     
