@@ -11,3 +11,12 @@ def binary_cross_entropy(y_true, y_pred):
 
 def binary_cross_entropy_prime(y_true, y_pred):
     return ((1 - y_true) / (1 - y_pred) - y_true / y_pred) / np.size(y_true)
+
+#chatgpt
+def categorical_crossentropy(y_true, y_pred):
+    # Clip predictions to prevent log(0)
+    y_pred = np.clip(y_pred, 1e-15, 1 - 1e-15)
+    return -np.mean(np.sum(y_true * np.log(y_pred), axis=0))
+
+def categorical_crossentropy_prime(y_true, y_pred):
+    return (y_pred - y_true) / y_pred.shape[0]

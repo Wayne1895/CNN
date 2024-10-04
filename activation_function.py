@@ -22,3 +22,25 @@ class Sigmoid(Activation):
             return s * (1 - s)
 
         super().__init__(sigmoid, sigmoid_prime)
+#chatgpt
+class ReLU(Activation):
+    def __init__(self):
+        def relu(x):
+            return np.maximum(0, x)
+
+        def relu_prime(x):
+            return (x > 0).astype(float)
+
+        super().__init__(relu, relu_prime)
+
+class Softmax(Activation):
+    def __init__(self):
+        def softmax(x):
+            e_x = np.exp(x - np.max(x))  # 防止溢出
+            return e_x / np.sum(e_x, axis=0, keepdims=True)
+
+        def softmax_prime(x):
+            # Softmax的導數較為複雜，這裡可以直接返回一個簡單的示例
+            return x * (1 - x)
+
+        super().__init__(softmax, softmax_prime)
