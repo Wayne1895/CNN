@@ -1,2 +1,5 @@
 data
 MNIST_0-9.py
+model_parameters.npy
+MNIST_01_LoadAndPredict.py
+MNIST_01_TRainAndSave.py
